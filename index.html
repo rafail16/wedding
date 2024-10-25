@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Γιάννης & Άννα</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=1.5">
-    <script src="script.js?v=1.5"></script>
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <script src="script.js?v=1.1"></script>
     <style>
-        /* Wrapper for the fixed background */
+        /* Background Wrapper */
         .background-wrapper {
             position: fixed;
             top: 0;
@@ -26,30 +26,38 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
             color: #fff;
-            padding: 0 10%;
             overflow-x: hidden;
-            overflow-y: auto;
+            overflow-y: hidden; /* Prevent vertical scroll */
             position: relative;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px; /* Padding for content spacing */
+            max-width: 600px;
+            min-height: 100vh; /* Ensure it fills the viewport */
+            box-sizing: border-box; /* Ensures padding is within height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
             color: #f9f6f7;
             font-size: 48px;
-            margin-bottom: 20px;
+            margin: 0 0 20px; /* Remove top margin, only bottom margin */
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
         }
 
         p {
             font-size: 22px;
-            margin-bottom: 20px;
-            margin-top: 20px;
+            margin: 10px 0 20px;
             color: #f0ece2;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
         }
@@ -59,7 +67,7 @@
             display: block;
             width: 80%;
             max-width: 300px;
-            margin: 20px auto;
+            margin: 10px auto; /* Add space between buttons */
             padding: 15px 30px;
             font-size: 20px;
             color: #fff;
