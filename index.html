@@ -13,10 +13,6 @@
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background: url('./assets/image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,16 +27,17 @@
             position: relative;
         }
 
-        /* Add a semi-transparent overlay to make text more readable, but limit it to viewport height */
+        /* Background image as a pseudo-element to simulate fixed background */
         body::before {
             content: "";
-            position: fixed; /* Fixed overlay within the viewport */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh; /* Only apply overlay to the visible area */
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-            z-index: -1;
+            height: 100vh;
+            background: url('./assets/image.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1; /* Place it behind the content */
         }
 
         h1 {
@@ -61,10 +58,10 @@
 
         /* Buttons for Upload and View Files */
         .btn {
-            display: block; /* Make each button take up full width */
-            width: 80%; /* Adjust the width to fit nicely within the page */
-            max-width: 300px; /* Limit max width for better readability */
-            margin: 10px auto; /* Center buttons and add vertical space */
+            display: block;
+            width: 80%; /* Adjust width for layout */
+            max-width: 300px; /* Set a max width */
+            margin: 20px auto; /* Add vertical space between buttons */
             padding: 15px 30px;
             font-size: 20px;
             color: #fff;
@@ -75,55 +72,49 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-
         .btn:hover {
             background-color: #f2999d; /* Slightly darker on hover */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Stronger hover shadow */
         }
 
-        /* Ensure the last button has smaller bottom margin */
-        .btn:last-of-type {
-            margin-bottom: 5vh; /* Adds a smaller 5% margin of the viewport height */
-        }
-
         /* Media Queries for responsiveness */
         @media (max-width: 768px) {
             h1 {
-                font-size: 40px;  /* Larger heading font size */
+                font-size: 40px;
             }
 
             p {
-                font-size: 24px;  /* Larger paragraph font size */
+                font-size: 24px;
             }
 
             .btn {
-                font-size: 18px;  /* Slightly smaller button font */
-                padding: 15px 28px; /* Adjust padding */
+                font-size: 18px;
+                padding: 15px 28px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 32px;  /* Larger heading for small devices */
+                font-size: 32px;
             }
 
             p {
-                font-size: 20px;  /* Larger paragraph font for readability */
+                font-size: 20px;
             }
 
             .btn {
-                font-size: 18px;  /* Adjust button size */
-                padding: 12px 24px; /* Smaller padding for mobile */
+                font-size: 18px;
+                padding: 12px 24px;
             }
         }
 
         @media (max-width: 320px) {
             h1 {
-                font-size: 28px;  /* Slightly smaller heading for very small screens */
+                font-size: 28px;
             }
 
             p {
-                font-size: 18px;  /* Slightly smaller text for very small screens */
+                font-size: 18px;
             }
 
             .btn {
@@ -139,13 +130,12 @@
 <body>
 
     <div class="content">
-        <h1>Μοιράσου τις Στιγμές του Γάμου</h1>
+        <h1>Μοιραστείτε τις Στιγμές του Γάμου</h1>
         <p>Θα χαρούμε να μοιραστείς μαζί μας τις όμορφες στιγμές από τη γιορτή μας. Ανεβάσε όσες φωτογραφίες και βίντεο επιθυμείς! </p>
 
         <!-- Dropbox file request link -->
         <a href="https://www.dropbox.com/request/TEIi8ij2LtazRGSIJcoU" target="_blank" class="btn">Ανεβάσε Φωτογραφίες</a>
 
-        </p>
         <!-- Dropbox view-only folder link -->
         <a href="https://tinyurl.com/yptfvfcy" target="_blank" class="btn">Μετάβαση στο άλμπουμ</a>
     </div>
