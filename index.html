@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Γιάννης & Άννα</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=1.7">
-    <script src="script.js?v=1.7"></script>
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <script src="script.js?v=1.1"></script>
     <style>
         /* Background Wrapper */
         .background-wrapper {
@@ -31,27 +31,27 @@
             min-height: 100vh;
             color: #fff;
             overflow-x: hidden;
-            overflow-y: hidden; /* Prevent vertical scroll */
             position: relative;
         }
 
         .content {
             text-align: center;
-            padding: 20px; /* Padding for content spacing */
+            padding: 20px;
             max-width: 600px;
-            min-height: 100vh; /* Ensure it fills the viewport */
-            box-sizing: border-box; /* Ensures padding is within height */
+            min-height: 100vh;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow-y: auto; /* Enables scrolling when content overflows */
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
             color: #f9f6f7;
             font-size: 48px;
-            margin: 0 0 20px; /* Remove top margin, only bottom margin */
+            margin: 0 0 20px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
         }
 
@@ -67,7 +67,7 @@
             display: block;
             width: 80%;
             max-width: 300px;
-            margin: 10px auto; /* Add space between buttons */
+            margin: 10px auto;
             padding: 15px 30px;
             font-size: 20px;
             color: #fff;
