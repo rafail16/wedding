@@ -61,17 +61,20 @@
 
         /* Buttons for Upload and View Files */
         .btn {
-            display: inline-block;
+            display: block; /* Make each button take up full width */
+            width: 80%; /* Adjust the width to fit nicely within the page */
+            max-width: 300px; /* Limit max width for better readability */
+            margin: 10px auto; /* Center buttons and add vertical space */
             padding: 15px 30px;
             font-size: 20px;
             color: #fff;
             background-color: #e6a1a6; /* Soft blush tone */
             text-decoration: none;
             border-radius: 50px;
-            margin: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Strong shadow */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
+
 
         .btn:hover {
             background-color: #f2999d; /* Slightly darker on hover */
